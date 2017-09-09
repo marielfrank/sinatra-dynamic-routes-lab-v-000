@@ -17,7 +17,7 @@ class App < Sinatra::Base
     @phrase = params[:phrase].gsub("%20", " ")
     final_phrase = ""
     @number.times {final_phrase += "#{@phrase} "}
-    final_phrase
+    final_phrase.strip
   end
 
   get "/say/:word1/:word2/:word3/:word4/:word5" do
